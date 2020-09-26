@@ -9,11 +9,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 words = []
 search_data_vocabs = []
 zhidao_data_vocabs = []
-title = []
-paragraphs = []
-answers = []
-question = []
-vocabs = []
+
 
 # 读取数据，处理MemoryError问题，防止json文件过大读取不了,读取一行处理一行
 def read_data(path_1, path_2):
@@ -86,11 +82,11 @@ def read_data(path_1, path_2):
 
 # 使用字典结构特性获取元素,最后返回vocabs列表
 def data_to_vocabs(data):
-    global answers
-    global question
-    global title
-    global paragraphs
-    global vocabs
+    title = []
+    paragraphs = []
+    answers = []
+    question = []
+    vocabs = []
 
     for answer in data["answers"]:
         answers.extend(seg_word(answer))
