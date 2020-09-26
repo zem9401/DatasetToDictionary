@@ -134,11 +134,11 @@ if __name__ == '__main__':
     # search_data_vocabs = data_to_vocabs(search_data)
     # zhidao_data_vocabs = data_to_vocabs(zhidao_data)
 
-    # search_vocabs = sort_vocab(search_data_vocabs)
-    # zhidao_vocabs = sort_vocab(zhidao_data_vocabs)
+    search_vocabs = sort_vocab(search_data_vocabs)
+    zhidao_vocabs = sort_vocab(zhidao_data_vocabs)
 
-    save_words_dictionary(search_data_vocabs, '{}/search_vocabs.txt'.format(BASE_DIR))
-    save_words_dictionary(zhidao_data_vocabs, '{}/zhidao_vocabs.txt'.format(BASE_DIR))
+    save_words_dictionary(search_vocabs, '{}/search_vocabs.txt'.format(BASE_DIR))
+    save_words_dictionary(zhidao_vocabs, '{}/zhidao_vocabs.txt'.format(BASE_DIR))
 
     # print(search_data_vocabs)
     # print(zhidao_data_vocabs)
