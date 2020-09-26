@@ -6,7 +6,6 @@ from collections import defaultdict, Counter
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-words = []
 search_data_vocabs = []
 zhidao_data_vocabs = []
 
@@ -45,7 +44,7 @@ def read_data(path_1, path_2):
             search_data_vocabs.extend(data_to_vocabs(data_1))
             # print("这里是search_data_vocabs")
             # print(search_data_vocabs)
-            search_vocabs = sort_vocab(search_data_vocabs)
+            # search_vocabs = sort_vocab(search_data_vocabs)
 
         for i, line in enumerate(f2):
             # print("这是data_2 i")
@@ -56,10 +55,10 @@ def read_data(path_1, path_2):
             zhidao_data_vocabs.extend(data_to_vocabs(data_2))
             # print("这里是zhidao_data_vocabs")
             # print(zhidao_data_vocabs)
-            zhidao_vocabs = sort_vocab(zhidao_data_vocabs)
+            # zhidao_vocabs = sort_vocab(zhidao_data_vocabs)
 
     # print(data_1)
-    return search_vocabs, zhidao_vocabs
+    return search_data_vocabs, zhidao_data_vocabs
 
 # 通过递归遍历内部内容
 # def data_to_vocabs(data):
