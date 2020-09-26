@@ -80,6 +80,8 @@ def read_data(path_1, path_2):
 #     return words
 
 # 使用字典结构特性获取元素,最后返回vocabs列表
+
+# 进行分词
 def data_to_vocabs(data):
     title = []
     paragraphs = []
@@ -103,6 +105,7 @@ def data_to_vocabs(data):
 
     return vocabs
 
+# 构建分词函数
 def seg_word(text):
     text_temp = list(jieba.cut(text))
     return text_temp
