@@ -1,0 +1,4 @@
+/DatasetToDictionary/.idea/*
+/DatasetToDictionary/DataSet
+*.class
+!/*.py
